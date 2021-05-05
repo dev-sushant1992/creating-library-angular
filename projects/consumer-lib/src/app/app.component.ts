@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderService } from 'my-lib';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'consumer-lib';
+
+  constructor(private headerService: HeaderService) {
+    this.headerService.logHeaderText();
+  }
 }
